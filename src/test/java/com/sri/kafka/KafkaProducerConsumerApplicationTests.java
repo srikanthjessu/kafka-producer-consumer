@@ -17,8 +17,8 @@ import org.springframework.kafka.test.utils.ContainerTestUtils;
 import org.springframework.test.context.junit4.SpringRunner;
 
 import com.sri.kafka.consumer.KafkaConsumer;
+import com.sri.kafka.model.Customer;
 import com.sri.kafka.producer.KafkaProducer;
-import com.sri.model.Customer;
 
 @RunWith(SpringRunner.class)
 @SpringBootTest

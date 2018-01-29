@@ -1,7 +1,11 @@
-package com.sri.model;
+package com.sri.kafka.model;
 
+import javax.persistence.Entity;
+import javax.persistence.Id;
+
+@Entity
 public class Customer {
-	
+	@Id
 	private String id;
 	private String firstName;
 	private String lastName;

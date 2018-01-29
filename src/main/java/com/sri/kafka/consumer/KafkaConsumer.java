@@ -6,7 +6,7 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.kafka.annotation.KafkaListener;
 
-import com.sri.model.Customer;
+import com.sri.kafka.model.Customer;
 
 public class KafkaConsumer {
 	private static final Logger LOGGER = LoggerFactory.getLogger(KafkaConsumer.class);
@@ -20,6 +20,8 @@ public class KafkaConsumer {
 	@KafkaListener(topics = "${kakfa.topic.customer}")
 	public void receive(Customer customer) {
 		LOGGER.info("received customer='{}'", customer.toString());
+		
+		
 		latch.countDown();
 	}
 }
